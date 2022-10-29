@@ -1,5 +1,8 @@
 ## WebRTC Object Detection By OpenCV
 
+## Demo Video
+[have a look](https://pitt-my.sharepoint.com/:v:/g/personal/tar118_pitt_edu/Ea8a5zplTHhHpVK-OTAzrZEBADeEA9BtdW__y7CLSq8r2w?e=mPH6Vl)
+
 ### Dependencies
 - Linux(Ubuntu 20.04 recommended)
 - Python3(3.9recommended)
@@ -34,8 +37,37 @@ These coordinates are from process_a but sent to server from client main thread.
     - Make a docker container for the client
     - Use minikube to create deployment of server and client.
 
-## Demo Video
-[have a look](https://pitt-my.sharepoint.com/:v:/g/personal/tar118_pitt_edu/Ea8a5zplTHhHpVK-OTAzrZEBADeEA9BtdW__y7CLSq8r2w?e=mPH6Vl)
+## Features
+
+* [x] Using `aiortc` built-in TCPSocketSignaling to setup server and client
+
+* [x] The Server generates continuous 2D bouncing ball images
+
+* [x] The Server transports these images by `MediaStreamTrack`
+
+* [x] The Client receives images on the socket
+
+* [x] The Client displays the images by `opencv`
+
+* [x] The Client starts a new process to handle the recognition task
+
+* [x] The Client transports data between process using `Queue`, `Value` in `multiprocessing`
+
+* [x] The Client parses the image and gets the position of the bouncing ball Using `opencv`
+
+* [x] The Client transports predicted position to the server using data channel.
+
+* [x] The Server print the received coordinates and compute the error to the actual position
+
+* [x] Docstrings
+
+* [x] Pytest
+
+* [x] Demo Video
+
+* [x] Build Docker Image
+
+* [x] Run different docker container with env ROLE
 
 
 ## Dependency Manager
@@ -130,36 +162,5 @@ docker run --name task_client -e ROLE="client" -p 8080:8080 -it taskServer:v1 ba
 ```bash
 docker attach [dockerid]
 ```
-
-## Features
-[x] Using `aiortc` built-in TCPSocketSignaling to setup server and client
-
-[x] The Server generates continuous 2D bouncing ball images
-
-[x] The Server transports these images by `MediaStreamTrack`
-
-[x] The Client receives images on the socket
-
-[x] The Client displays the images by `opencv`
-
-[x] The Client starts a new process to handle the recognition task
-
-[x] The Client transports data between process using `Queue`, `Value` in `multiprocessing`
-
-[x] The Client parses the image and gets the position of the bouncing ball Using `opencv`
-
-[x] The Client transports predicted position to the server using data channel.
-
-[x] The Server print the received coordinates and compute the error to the actual position
-
-[x] Docstrings
-
-[x] Pytest
-
-[x] Demo Video
-
-[x] Build Docker Image
-
-[x] Run different docker container with env ROLE
 
 
