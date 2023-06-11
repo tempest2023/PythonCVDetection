@@ -1,7 +1,11 @@
 ## WebRTC Object Detection By OpenCV
 
 ## Demo Video
-[have a look](https://pitt-my.sharepoint.com/:v:/g/personal/tar118_pitt_edu/Ea8a5zplTHhHpVK-OTAzrZEBADeEA9BtdW__y7CLSq8r2w?e=mPH6Vl)
+
+https://github.com/623059008/PythonCVDetection/assets/8498023/090ee26f-3fb0-4331-8337-9ce7ef89d281
+
+
+[Video Link](https://pitt-my.sharepoint.com/:v:/g/personal/tar118_pitt_edu/Ea8a5zplTHhHpVK-OTAzrZEBADeEA9BtdW__y7CLSq8r2w?e=mPH6Vl)
 
 ### Dependencies
 - Linux(Ubuntu 20.04 recommended)
